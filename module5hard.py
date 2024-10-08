@@ -64,8 +64,10 @@ class UrTube:
                 if not user.adult_mode and user.age < 18 and video.adult_mode:
                     raise ValueError("Вам нет 18 лет, пожалуйста покиньте страницу")
 
-                for second in range(1, 11):
-                    print(f"{second}")
+                for video.time_now in range(video.duration):
+                    video.time_now += 1
+                    video.duration += 1
+                    print(f"{video.time_now}")
                     sleep(1)
 
                 print("Конец видео")
