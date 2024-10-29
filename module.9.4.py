@@ -7,9 +7,8 @@ print(new_list)
 def get_advanced_writer(file_name):
     def write_everything(*data_set):
         with open(file_name, 'a', encoding='utf-8') as file:
-            file.write(str(data_set[0]) + '\n')
-            file.write(str(data_set[1]) + '\n')
-            file.write('\n')
+            for data in data_set:
+                print(data, file=file)
 
     return write_everything
 write = get_advanced_writer('example.txt')
